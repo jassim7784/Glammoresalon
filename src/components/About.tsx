@@ -1,0 +1,50 @@
+ export default function About() {
+
+  return (
+
+    <section className="about-section">
+
+      <div className="about-image">
+
+        <img
+          src="/images/reception-area.jpeg"
+          alt="Salon"
+        />
+
+      </div>
+
+      <div className="about-content">
+
+        <p className="about-tag">
+          ABOUT GLAMMORE
+        </p>
+
+        <h2>
+          Premium Luxury
+          <span className="gold-text">
+            {" "}Salon Experience
+          </span>
+        </h2>
+
+        <p className="about-description">
+
+          Step into a world where elegance,
+          beauty and luxury come together.
+
+          Our salon offers world-class beauty
+          treatments, professional care,
+          premium styling and personalized
+          wellness experiences designed for
+          modern beauty standards.
+
+        </p>
+
+        <a href="#contact" className="primary-btn">
+          Book Your Visit
+        </a>
+
+      </div>
+
+    </section>
+  );
+}
