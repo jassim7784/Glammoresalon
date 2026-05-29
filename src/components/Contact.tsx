@@ -68,7 +68,7 @@ Message: ${formData.message}`;
         <div className="map-container">
 
            <iframe
-            src="https://maps.google.com/maps?q=9.37127749638838,76.57928700611839&z=17&output=embed"
+            src="https://maps.google.com/maps?q=9.37093545602042, 76.57918359677527z=17&output=embed"
             width="100%"
             height="100%"
             loading="lazy"

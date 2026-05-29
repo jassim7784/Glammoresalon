@@ -1,5 +1,10 @@
- import Image from "next/image";
+import Image from "next/image";
 
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaYoutube,
+} from "react-icons/fa";
 export default function Footer() {
 
   return (
@@ -38,22 +43,42 @@ export default function Footer() {
 
       </div>
 
+      
+
       {/* RIGHT */}
 
-      <div className="footer-right">
+<div className="footer-right">
 
-        <h3>
-          Get to know us
-        </h3>
+  <h3>
+    Get to know us
+  </h3>
 
-        <a
-          href="https://instagram.com/glammore.unisex.salon"
-          target="_blank"
-        >
-          Instagram
-        </a>
+   <div className="social-icons">
 
-      </div>
+  <a
+    href="https://instagram.com/glammore.unisex.salon"
+    target="_blank"
+  >
+    <FaInstagram />
+  </a>
+
+  <a
+    href="https://facebook.com"
+    target="_blank"
+  >
+    <FaFacebookF />
+  </a>
+
+  <a
+    href="https://youtube.com"
+    target="_blank"
+  >
+    <FaYoutube />
+  </a>
+
+</div>
+
+</div>
 
     </footer>
   );
