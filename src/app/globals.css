@@ -2022,3 +2022,34 @@ body {
     border-radius: 16px;
   }
 }
+
+/* NAVBAR BRAND TEXT */
+.navbar-brand-text {
+  color: #d4af37;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand-text {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-brand-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-brand-text {
+    display: none; /* Prevents overflow next to Hamburger drawer */
+  }
+}

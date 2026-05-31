@@ -18,12 +18,16 @@ export default function Navbar() {
       <nav className="navbar">
 
         {/* LOGO */}
-        <a href="/" className="logo-link" style={{ display: "block" }}>
+        <a href="/" className="logo-link" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none" }}>
           <img
             src="/images/logo.png"
             alt="Glam'more Logo"
             className="logo-image"
+            style={{ width: "50px", height: "auto" }}
           />
+          <span className="navbar-brand-text">
+            Glam'more Unisex Salon
+          </span>
         </a>
 
         {/* HAMBURGER MENU */}

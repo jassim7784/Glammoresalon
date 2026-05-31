@@ -68,7 +68,7 @@ export default function Footer() {
             <FaWhatsapp />
           </a>
           <a
-            href="https://maps.google.com/maps?q=9.370987,76.579257&z=17"
+            href="https://maps.app.goo.gl/XUFVqGPK9REuB6yf8"
             target="_blank"
           >
             <FaGoogle />
