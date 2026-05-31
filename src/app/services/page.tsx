@@ -4,6 +4,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FaCheckCircle, FaTimes, FaCalendarAlt, FaClock, FaUser } from "react-icons/fa";
+import { Calendar } from "@/components/ui/calendar";
 
 interface ServiceItem {
   id: string;
@@ -19,10 +20,21 @@ export default function ServicesPage() {
   const [categoryFilter, setCategoryFilter] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
   
+  // Date Helpers
+  const getTodayDateString = () => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  };
+
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
+
   // Booking Form State
   const [bookingDetails, setBookingDetails] = useState({
     name: "",
-    date: "",
+    date: getTodayDateString(),
     time: "",
     message: "",
   });
@@ -188,12 +200,17 @@ export default function ServicesPage() {
     setSelectedServices([]);
   };
 
-  const getTodayDateString = () => {
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, "0");
-    const day = String(today.getDate()).padStart(2, "0");
-    return `${year}-${month}-${day}`;
+  const handleDateSelect = (date: Date | undefined) => {
+    setSelectedDate(date);
+    if (date) {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const day = String(date.getDate()).padStart(2, "0");
+      const dateStr = `${year}-${month}-${day}`;
+      setBookingDetails((prev) => ({ ...prev, date: dateStr }));
+    } else {
+      setBookingDetails((prev) => ({ ...prev, date: "" }));
+    }
   };
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -388,52 +405,60 @@ Message: ${bookingDetails.message || "None"}`;
                 <form onSubmit={handleBookingSubmit} className="booking-sidebar-form">
                   <h3>Confirm Appointment</h3>
                   
-                  <div className="booking-form-row">
-                    <div className="input-group">
-                      <span className="input-icon"><FaUser /></span>
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        value={bookingDetails.name}
-                        onChange={handleFormChange}
-                        required
-                      />
+                  <div className="booking-form-main-layout">
+                    {/* LEFT COLUMN: Inputs stacked vertically */}
+                    <div className="booking-form-inputs-left">
+                      <div className="input-group">
+                        <span className="input-icon"><FaUser /></span>
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Your Name"
+                          value={bookingDetails.name}
+                          onChange={handleFormChange}
+                          required
+                        />
+                      </div>
+
+                      <div className="input-group">
+                        <span className="input-icon"><FaClock /></span>
+                        <input
+                          type="time"
+                          name="time"
+                          min="09:00"
+                          max="19:00"
+                          value={bookingDetails.time}
+                          onChange={handleFormChange}
+                          required
+                        />
+                      </div>
+
+                      <div className="input-group textarea-group">
+                        <textarea
+                          name="message"
+                          placeholder="Preferred Stylist or Special Instructions..."
+                          value={bookingDetails.message}
+                          onChange={handleFormChange}
+                        ></textarea>
+                      </div>
                     </div>
 
-                    <div className="input-group">
-                      <span className="input-icon"><FaCalendarAlt /></span>
-                      <input
-                        type="date"
-                        name="date"
-                        min={getTodayDateString()}
-                        value={bookingDetails.date}
-                        onChange={handleFormChange}
-                        required
+                    {/* RIGHT COLUMN: The Interactive Inline Calendar! */}
+                    <div className="booking-form-calendar-right">
+                      <label className="calendar-field-label">
+                        Select Appointment Date:
+                      </label>
+                      <Calendar
+                        mode="single"
+                        selected={selectedDate}
+                        onSelect={handleDateSelect}
+                        disabled={{ before: new Date() }}
+                        className="rounded-lg border"
+                        captionLayout="dropdown"
+                        startMonth={new Date()}
+                        endMonth={new Date(new Date().getFullYear() + 2, 11)}
                       />
                     </div>
-
-                    <div className="input-group">
-                      <span className="input-icon"><FaClock /></span>
-                      <input
-                        type="time"
-                        name="time"
-                        min="09:00"
-                        max="19:00"
-                        value={bookingDetails.time}
-                        onChange={handleFormChange}
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="input-group textarea-group">
-                    <textarea
-                      name="message"
-                      placeholder="Preferred Stylist or Special Instructions..."
-                      value={bookingDetails.message}
-                      onChange={handleFormChange}
-                    ></textarea>
                   </div>
 
                   <button type="submit" className="booking-submit-btn">
