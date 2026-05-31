@@ -9,11 +9,14 @@ export default function Footer() {
     <footer className="footer">
       {/* LEFT */}
       <div className="footer-left">
-        <h2 style={{ color: "#d4af37", fontSize: "20px", fontWeight: "700", letterSpacing: "3px", textTransform: "uppercase", marginBottom: "8px", fontFamily: "Playfair Display, serif", lineHeight: "1.4" }}>
+        <h2 style={{ color: "#d4af37", fontSize: "20px", fontWeight: "700", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "8px", fontFamily: "Playfair Display, serif", lineHeight: "1.4" }}>
           Glammore Premium Unisex Salon
         </h2>
-        <p style={{ color: "#888", fontSize: "13px" }}>All Rights Reserved, 2026</p>
-        <p style={{ marginTop: "12px", fontSize: "12px", color: "#666" }}>
+        <p style={{ color: "#aaa", fontSize: "13px", lineHeight: "1.6", marginBottom: "12px", maxWidth: "450px" }}>
+          Address: First Floor, Professional Building, SH 1, Kollam - Theni Hwy, Thukalassery, Thiruvalla, Kerala 689115, India
+        </p>
+        <p style={{ color: "#666", fontSize: "13px" }}>All Rights Reserved, 2026</p>
+        <p style={{ marginTop: "12px", fontSize: "12px", color: "#555" }}>
           Powered by Raphael Group -{" "}
           <a
             href="https://raphaelgroup.in"
