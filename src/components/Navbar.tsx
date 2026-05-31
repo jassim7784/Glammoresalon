@@ -21,7 +21,7 @@ export default function Navbar() {
         <a href="/" className="logo-link" style={{ display: "block" }}>
           <img
             src="/images/logo.png"
-            alt="Glammore Logo"
+            alt="Glam'more Logo"
             className="logo-image"
           />
         </a>

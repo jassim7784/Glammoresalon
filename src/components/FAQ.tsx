@@ -19,9 +19,9 @@ export default function FAQ() {
 
   const fallbackFaqs = [
     {
-      question: "What makes Glammore the premium unisex salon in Thiruvalla?",
+      question: "What makes Glam'more the unisex salon in Thiruvalla?",
       answer:
-        "Glammore is recognized as the leading premium unisex salon in Thiruvalla, offering world-class hair styling, skin therapies, and beauty treatments. Our team of expert stylists and certified therapists use top-tier global products to deliver customized grooming, precision cuts, and luxury beauty services in a pristine environment designed for both men and women.",
+        "Glam'more is recognized as the leading unisex salon in Thiruvalla, offering world-class hair styling, skin therapies, and beauty treatments. Our team of expert stylists and certified therapists use top-tier global products to deliver customized grooming, precision cuts, and luxury beauty services in a pristine environment designed for both men and women.",
     },
     {
       question: "Do you offer professional bridal makeup in Thiruvalla?",
@@ -34,14 +34,14 @@ export default function FAQ() {
         "As the best hair salon in Thiruvalla, we offer a comprehensive suite of hair care solutions, including precision haircuts, creative hair styling, keratin treatments, hair smoothening, global hair coloring, and organic hair spa therapies. Our master stylists are trained in modern international trends and cater to all hair textures.",
     },
     {
-      question: "What are the operating hours for Glammore Unisex Salon in Thiruvalla?",
+      question: "What are the operating hours for Glam'more Unisex Salon in Thiruvalla?",
       answer:
-        "Glammore Unisex Salon in Thiruvalla is open every day from Monday to Sunday, from 10:00 AM to 9:30 PM (including Sundays). We recommend booking your appointments in advance to secure your preferred master stylist, although walk-in clients are always welcome based on seat availability.",
+        "Glam'more Unisex Salon in Thiruvalla is open every day from Monday to Sunday, from 10:00 AM to 9:30 PM (including Sundays). We recommend booking your appointments in advance to secure your preferred master stylist, although walk-in clients are always welcome based on seat availability.",
     },
     {
       question: "Do you provide premium nail art and pedicure services?",
       answer:
-        "Yes, we are a fully equipped nail art salon in Thiruvalla. Our services include high-quality acrylic gel nail extensions, custom nail art designs, spa pedicures, and pampering manicures. We use safe, long-lasting premium gel polishes to keep your nails looking flawless, strong, and beautiful.",
+        "Yes, we are a fully equipped nail art salon in Thiruvalla. Our services include high-quality acrylic gel nail extensions, custom nail art designs, spa pedicures, and pampering manicures. We use safe, long-lasting gel polishes to keep your nails looking flawless, strong, and beautiful.",
     },
   ];
 

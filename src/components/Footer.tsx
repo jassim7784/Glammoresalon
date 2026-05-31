@@ -2,6 +2,8 @@ import {
   FaInstagram,
   FaFacebookF,
   FaYoutube,
+  FaWhatsapp,
+  FaGoogle,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -10,10 +12,10 @@ export default function Footer() {
       {/* LEFT */}
       <div className="footer-left">
         <h2 style={{ color: "#d4af37", fontSize: "20px", fontWeight: "700", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "8px", fontFamily: "Playfair Display, serif", lineHeight: "1.4" }}>
-          Glammore Premium Unisex Salon
+          Glam'more Unisex Salon
         </h2>
         <p style={{ color: "#aaa", fontSize: "13px", lineHeight: "1.6", marginBottom: "12px", maxWidth: "450px" }}>
-          Address: First Floor, Professional Building, SH 1, Kollam - Theni Hwy, Thukalassery, Thiruvalla, Kerala 689115, India
+          First Floor, Professional Building, SH 1, Kollam - Theni Hwy, Thukalassery, Thiruvalla, Kerala 689115, India
         </p>
         <p style={{ color: "#666", fontSize: "13px" }}>All Rights Reserved, 2026</p>
         <p style={{ marginTop: "12px", fontSize: "12px", color: "#555" }}>
@@ -57,6 +59,19 @@ export default function Footer() {
             target="_blank"
           >
             <FaYoutube />
+          </a>
+          <a
+            href="https://wa.me/919645915329"
+            target="_blank"
+            style={{ color: "#25D366" }}
+          >
+            <FaWhatsapp />
+          </a>
+          <a
+            href="https://maps.google.com/maps?q=9.370987,76.579257&z=17"
+            target="_blank"
+          >
+            <FaGoogle />
           </a>
         </div>
       </div>

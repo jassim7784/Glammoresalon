@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Glammore | Premium Unisex Salon in Thiruvalla",
-  description: "Top premium unisex salon in Thiruvalla. World-class bridal makeup, haircuts, nail art, and luxury spa.",
+  title: "Glam'more | Unisex Salon in Thiruvalla",
+  description: "Top unisex salon in Thiruvalla. World-class bridal makeup, haircuts, nail art, and luxury spa.",
 };
 
 export const viewport = {

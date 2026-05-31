@@ -20,14 +20,14 @@ export default function Blog() {
       category: "Beauty",
       title: "Top Luxury Hair Trends in 2026",
       description:
-        "Discover the latest premium hairstyles and salon transformations dominating this year.",
+        "Discover the latest luxury hairstyles and salon transformations dominating this year.",
     },
     {
       image: "/images/model2.jpeg",
       category: "Skincare",
       title: "5 Secrets For Healthy Glowing Skin",
       description:
-        "Professional skincare techniques used by premium beauty specialists.",
+        "Professional skincare techniques used by skilled beauty specialists.",
     },
     {
       image: "/images/spa-area.jpeg",

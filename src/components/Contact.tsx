@@ -25,7 +25,7 @@ export default function Contact() {
 
     const phoneNumber = "919645915329";
 
-    const text = `Hello Glammore Salon,
+    const text = `Hello Glam'more Salon,
 
 My name is ${formData.name}.
 
@@ -39,64 +39,64 @@ ${formData.message}`;
 
   return (
     <section className="contact-section" id="contact">
-      <div className="section-title">
-        <p>CONTACT US</p>
-        <h2>
-          Book Your
-          <span className="gold-text">
-            {" "}Comfort Session
-          </span>
-        </h2>
-      </div>
-
       <div className="contact-container">
-        {/* LEFT SIDE - MAP */}
-        <div className="map-container">
-          <iframe
-            src="https://maps.google.com/maps?q=9.370987,76.579257&z=17&output=embed"
-            width="100%"
-            height="100%"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+        {/* LEFT SIDE - FIND US */}
+        <div className="map-column" style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+          <h2 style={{ color: "#d4af37", fontSize: "22px", fontWeight: "700", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "25px", fontFamily: "Playfair Display, serif" }}>
+            Find Us
+          </h2>
+          <div className="map-container" style={{ flex: 1 }}>
+            <iframe
+              src="https://maps.google.com/maps?q=9.370987,76.579257&z=17&output=embed"
+              width="100%"
+              height="100%"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
 
-          <div className="map-details">
-            <h3>Glammore Premium Unisex Salon</h3>
-            <p>
-              📍 Club 7 Junction, MC Road, Thiruvalla, Kerala
-            </p>
+            <div className="map-details">
+              <h3>Glam'more Unisex Salon</h3>
+              <p>
+                First Floor, Professional Building, SH 1, Kollam - Theni Hwy, Thukalassery, Thiruvalla, Kerala 689115, India
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* RIGHT SIDE - FORM */}
-        <form
-          className="contact-form"
-          onSubmit={sendToWhatsApp}
-        >
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
-
-          <button
-            type="submit"
-            className="primary-btn"
+        {/* RIGHT SIDE - CONTACT US */}
+        <div className="form-column" style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+          <h2 style={{ color: "#d4af37", fontSize: "22px", fontWeight: "700", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "25px", fontFamily: "Playfair Display, serif" }}>
+            Contact Us
+          </h2>
+          <form
+            className="contact-form"
+            onSubmit={sendToWhatsApp}
           >
-            Send Message
-          </button>
-        </form>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+
+            <button
+              type="submit"
+              className="primary-btn"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );

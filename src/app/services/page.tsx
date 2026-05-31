@@ -258,9 +258,9 @@ export default function ServicesPage() {
     const phoneNumber = "919645915329";
     const servicesList = selectedServices.map((s) => `- ${s}`).join("\n");
 
-    const text = `Hello Glammore Salon,
+    const text = `Hello Glam'more Salon,
 
-I would like to book a premium comfort session for the following services:
+I would like to book a comfort session for the following services:
 ${servicesList}
 
 Name: ${bookingDetails.name}
@@ -285,10 +285,8 @@ Message: ${bookingDetails.message || "None"}`;
 
       <main className="services-page">
         <header className="services-page-header">
-          <p className="services-tag">OUR SERVICES</p>
-          <h1>
-            Luxury Beauty &
-            <span className="gold-text"> Services Showcase</span>
+          <h1 style={{ fontSize: "54px", textTransform: "uppercase", letterSpacing: "4px", margin: "0 0 20px", fontFamily: "Playfair Display, serif", fontWeight: "700" }}>
+            Our <span className="gold-text">Services</span>
           </h1>
           <p className="services-subtitle">
             Select multiple services below to build your customized pampering package.
@@ -462,7 +460,7 @@ Message: ${bookingDetails.message || "None"}`;
                   </div>
 
                   <button type="submit" className="booking-submit-btn">
-                    Book now
+                    Complete Via Whatsapp
                   </button>
                 </form>
               </div>

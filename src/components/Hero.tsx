@@ -15,7 +15,7 @@
         </h1>
 
         <p>
-          Welcome to Glammore, the leading premium unisex salon in Thiruvalla. 
+          Welcome to Glam'more, the leading unisex salon in Thiruvalla. 
           Discover luxury treatments, expert styling, flawless bridal makeup, 
           and revitalizing wellness services designed to make you feel your absolute best.
         </p>

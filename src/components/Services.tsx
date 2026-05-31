@@ -23,7 +23,7 @@ export default function Services() {
     },
     {
       title: "Nail Care",
-      description: "Premium manicure and nail art experience.",
+      description: "Luxury manicure and nail art experience.",
       image: "/images/nail-polish .jpeg",
     },
     {
