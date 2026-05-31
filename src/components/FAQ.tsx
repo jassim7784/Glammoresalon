@@ -2,6 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { client } from "@/sanity/client";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 interface FAQItem {
   question: string;
@@ -9,7 +15,6 @@ interface FAQItem {
 }
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState(0);
   const [faqs, setFaqs] = useState<FAQItem[]>([]);
 
   const fallbackFaqs = [
@@ -66,23 +71,21 @@ export default function FAQ() {
 
       {/* CENTERED FAQ ACCORDIONS */}
       <div className="faq-right">
-        {displayFaqs.map((faq, index) => (
-          <div className="faq-card" key={index}>
-            <div
-              className="faq-question"
-              onClick={() => setOpenIndex(index)}
-            >
-              <h3>{faq.question}</h3>
-              <span>{openIndex === index ? "−" : "+"}</span>
-            </div>
-
-            {openIndex === index && (
-              <div className="faq-answer">
-                <p>{faq.answer}</p>
-              </div>
-            )}
-          </div>
-        ))}
+        <Accordion defaultValue={["faq-0"]} className="faq-accordion-group">
+          {displayFaqs.map((faq, index) => {
+            const itemValue = `faq-${index}`;
+            return (
+              <AccordionItem key={index} value={itemValue} className="faq-card">
+                <AccordionTrigger className="faq-question">
+                  <h3>{faq.question}</h3>
+                </AccordionTrigger>
+                <AccordionContent className="faq-answer">
+                  <p>{faq.answer}</p>
+                </AccordionContent>
+              </AccordionItem>
+            );
+          })}
+        </Accordion>
       </div>
     </section>
   );
