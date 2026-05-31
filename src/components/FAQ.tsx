@@ -80,7 +80,9 @@ export default function FAQ() {
                   <h3>{faq.question}</h3>
                 </AccordionTrigger>
                 <AccordionContent className="faq-answer">
-                  <p>{faq.answer}</p>
+                  <div className="faq-answer-inner">
+                    <p>{faq.answer}</p>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             );

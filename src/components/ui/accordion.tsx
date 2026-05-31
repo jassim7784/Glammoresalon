@@ -119,10 +119,13 @@ export function AccordionTrigger({
         style={{
           color: "#d4af37",
           fontSize: "24px",
-          transition: "transform 0.2s ease"
+          transition: "transform 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+          transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
+          display: "inline-block",
+          transformOrigin: "center"
         }}
       >
-        {isOpen ? "−" : "+"}
+        +
       </span>
     </button>
   );
@@ -146,11 +149,22 @@ export function AccordionContent({
 
   const isOpen = accordionContext.value.includes(itemContext.value);
 
-  if (!isOpen) return null;
-
   return (
-    <div className={className} {...props}>
-      {children}
+    <div
+      className={className}
+      style={{
+        display: "grid",
+        gridTemplateRows: isOpen ? "1fr" : "0fr",
+        transition: "grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+        opacity: isOpen ? 1 : 0,
+        overflow: "hidden"
+      }}
+      aria-hidden={!isOpen}
+      {...props}
+    >
+      <div style={{ minHeight: "0" }}>
+        {children}
+      </div>
     </div>
   );
 }
