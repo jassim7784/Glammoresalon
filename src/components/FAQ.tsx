@@ -19,29 +19,29 @@ export default function FAQ() {
 
   const fallbackFaqs = [
     {
-      question: "Where is Glammore Unisex Salon located?",
+      question: "What makes Glammore the premium unisex salon in Thiruvalla?",
       answer:
-        "We are situated in the heart of Thiruvalla. You can locate us through the Google Maps section below.",
+        "Glammore is recognized as the leading premium unisex salon in Thiruvalla, offering world-class hair styling, skin therapies, and beauty treatments. Our team of expert stylists and certified therapists use top-tier global products to deliver customized grooming, precision cuts, and luxury beauty services in a pristine environment designed for both men and women.",
     },
     {
-      question: "What are your opening hours?",
+      question: "Do you offer professional bridal makeup in Thiruvalla?",
       answer:
-        "We are open Monday to Sunday from 10:00 AM to 9:30 PM including Sundays.",
+        "Yes, we specialize in high-end bridal makeup in Thiruvalla. Our master makeup artists provide custom HD and airbrush bridal makeups, pre-wedding skin preparation treatments, and comprehensive groom makeover packages, all tailored during personalized consultations to ensure you look breathtaking on your special day.",
     },
     {
-      question: "How can I book an appointment?",
+      question: "What hair care and styling services are available at your salon?",
       answer:
-        "You can call us directly, DM us on Instagram or walk into the salon directly.",
+        "As the best hair salon in Thiruvalla, we offer a comprehensive suite of hair care solutions, including precision haircuts, creative hair styling, keratin treatments, hair smoothening, global hair coloring, and organic hair spa therapies. Our master stylists are trained in modern international trends and cater to all hair textures.",
     },
     {
-      question: "What services do you offer?",
+      question: "What are the operating hours for Glammore Unisex Salon in Thiruvalla?",
       answer:
-        "We provide premium grooming, hair styling, facials, bridal makeup, beard grooming, nail care and luxury wellness services.",
+        "Glammore Unisex Salon in Thiruvalla is open every day from Monday to Sunday, from 10:00 AM to 9:30 PM (including Sundays). We recommend booking your appointments in advance to secure your preferred master stylist, although walk-in clients are always welcome based on seat availability.",
     },
     {
-      question: "Do you specialize in bridal makeup?",
+      question: "Do you provide premium nail art and pedicure services?",
       answer:
-        "Yes. We offer premium bridal and groom packages with personalized consultation.",
+        "Yes, we are a fully equipped nail art salon in Thiruvalla. Our services include high-quality acrylic gel nail extensions, custom nail art designs, spa pedicures, and pampering manicures. We use safe, long-lasting premium gel polishes to keep your nails looking flawless, strong, and beautiful.",
     },
   ];
 
